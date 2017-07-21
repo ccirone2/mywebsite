@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block head_title %}Chris Cirone{% endblock head_title %}</title>
+    <meta charset="utf-8" /> {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'gallery/css/bootstrap.min.css' %}" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+    <nav class="navbar navbar-static-top navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://chriscirone.com"><b>chris cirone</b></a>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/projects">projects</a></li>
+                    <li><a href="/gallery">gallery</a></li>
+                    <li><a href="/about">about</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container navbar-offset">
+        {% block content %} {% endblock %}
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 text-left text-muted">
+                        <ul class="list-inline">
+                            <li><a href="mailto:ccirone2+fromwebsite@gmail.com">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-right text-muted">
+                        Copyright (c) 2017, Chris Cirone
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script src="{% static 'gallery/js/jquery.js' %}"></script>
+    <script src="{% static 'gallery/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
